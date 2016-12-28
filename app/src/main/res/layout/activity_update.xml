@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progressWheel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        wheel:matProg_barColor="@color/primary"
+        wheel:matProg_progressIndeterminate="true" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:text="@string/email_id"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tvEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="@string/email_id"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:text="@string/name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/name"
+                android:singleLine="true"
+                android:inputType="textCapSentences"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:text="@string/mobile_no"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/etMobNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/mobile_no"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:inputType="number"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:text="@string/address"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/address"
+                android:singleLine="true"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:text="@string/select_city"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="10dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/update"
+                android:background="@color/primary"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

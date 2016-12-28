@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="item name"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/tvQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:text="qty"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/lightBlack"/>
+    <TextView
+        android:id="@+id/tvRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvQty"
+        android:layout_alignTop="@+id/tvQty"
+        android:text="rate"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/lightBlack"/>
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvQty"
+        android:layout_marginLeft="10dp"
+        android:text="total"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tvMenuId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tvItemId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+</RelativeLayout>

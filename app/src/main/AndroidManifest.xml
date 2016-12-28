@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="grk.impala">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission
+        android:name="grk.impala.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="grk.impala.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StatusDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ForgotActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UpdateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeliveryStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NotificationActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="grk.impala.grk.android.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="grk.impala" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+
+        <activity android:name=".util.RuntimePermissionsActivity"></activity>
+    </application>
+
+</manifest>

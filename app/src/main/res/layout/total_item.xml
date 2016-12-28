@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:id="@+id/dividerTop"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:orientation="horizontal"
+        android:background="@color/lightBlack" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerTop"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:text="@string/subtotal"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/tvTotalAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvTotal"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tvPacking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTotal"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"
+        android:text="@string/delivery"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/lightBlack" />
+    <TextView
+        android:id="@+id/tvPackingAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvPacking"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/lightBlack" />
+
+    <LinearLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvPacking"
+        android:layout_marginTop="10dp"
+        android:background="@color/lightBlack" />
+    <TextView
+        android:id="@+id/tvGrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:text="@string/total"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/tvGrandAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvGrand"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGrandAmt"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDelAddr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivery_address"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/lightBlack" />
+
+            <TextView
+                android:id="@+id/tvDel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/delivery_address"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/lightBlack" />
+
+            <TextView
+                android:id="@+id/tvDelCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivery_address"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/lightBlack" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <Button
+        android:id="@+id/btProceed"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/card_view"
+        android:layout_margin="20dp"
+        android:text="@string/check_out"
+        android:textColor="@color/white"
+        android:background="@color/primary"/>
+</RelativeLayout>

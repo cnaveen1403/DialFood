@@ -1,0 +1,197 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="32dp"
+            app:expandedTitleMarginEnd="64dp">
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+
+                <LinearLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product Info"
+                        android:textColor="@color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <TextView
+                        android:id="@+id/tvInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <LinearLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                   <!-- <TextView
+                        android:id="@+id/tvItemName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Item"
+                        android:textColor="@color/black"/>-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvBasic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Basic Price"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/tvBasicRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/stroke_grey">
+                        <Button
+                            android:id="@+id/btSub"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text="@string/minus"
+                            android:textColor="@color/black"
+                            android:background="@android:color/transparent"/>
+                        <TextView
+                            android:id="@+id/tvQty"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="1"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/black"
+                            android:background="@drawable/button_bg"/>
+                        <Button
+                            android:id="@+id/btAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text="@string/plus"
+                            android:textColor="@color/black"
+                            android:background="@android:color/transparent"/>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:id="@+id/tvTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Total"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="0"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btCart"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="30dp"
+                        android:text="Add to Cart"
+                        android:background="@color/primary"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

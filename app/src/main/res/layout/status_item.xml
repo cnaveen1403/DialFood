@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tvUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OrderID"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvOrderDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date and Time"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/primary" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="total"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/primary"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvOrderBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Order By:"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primary" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvMobileNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+</LinearLayout>

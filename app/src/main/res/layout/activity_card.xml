@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/total_amount"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTotalAmount"
+        android:layout_centerHorizontal="true"
+        android:text="@string/amount"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAmount"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/choose_payment"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RadioGroup
+        android:id="@+id/radioPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvMode"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp" >
+
+        <RadioButton
+            android:id="@+id/radioCod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/radio_cod"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/radio_card" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rlCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioPayment"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+        <!-- <TextView
+             android:id="@+id/tvCardNo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="20dp"
+             android:text="@string/cardno"
+             android:textColor="@color/black"
+             android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="@string/cardhint"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLength="19"
+            android:textColor="@color/black" >
+        </EditText>
+
+        <!--<TextView
+            android:id="@+id/tvExpiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etFirstName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/expiry"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+        <EditText
+            android:id="@+id/etExpiryMM"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etFirstName"
+            android:layout_below="@+id/etFirstName"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/expirymm"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLength="2"
+            android:textColor="@color/black" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/etExpiryYY"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/etExpiryMM"
+            android:layout_toRightOf="@+id/etExpiryMM"
+            android:ems="10"
+            android:hint="@string/expiryyy"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLength="2"
+            android:textColor="@color/black" >
+        </EditText>
+
+        <!--<TextView
+            android:id="@+id/tvSecurity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etExpiryMM"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/security"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+        <EditText
+            android:id="@+id/etCvv"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etExpiryMM"
+            android:layout_below="@+id/etExpiryMM"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/cvv"
+            android:inputType="numberPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLength="3"
+            android:textColor="@color/black" >
+        </EditText>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btPay"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rlCard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/primary"
+        android:text="@string/pay"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

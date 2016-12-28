@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/menuImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:border_width="1dp"
+        app:border_color="@color/primary"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/menuImage"
+        android:layout_marginLeft="10dp"
+        android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="item name"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_alignLeft="@+id/tvName"
+            android:layout_marginTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="rate"
+            android:textColor="@color/lightBlack" />
+
+        <TextView
+            android:id="@+id/tvQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvRate"
+            android:layout_alignTop="@+id/tvRate"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/lightBlack"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvRateHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvMenuId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvItemId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvMenuName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvMenuTnUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvMenuImgUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvProductInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvAvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btAdd"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:text="Add"
+        android:textSize="10sp"
+        android:textColor="@color/lightBlack"
+        android:background="@drawable/add_selector"/>
+</RelativeLayout>
